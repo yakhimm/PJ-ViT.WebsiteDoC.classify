@@ -13,7 +13,7 @@ import webbrowser # inbuilt module
 
 #=================================== Title ===============================
 st.title("""
-Cat 🐱 Or Dog 🐶 Recognizer
+Cat 🐱 Or Dog 🐶
 	""")
 
 #================================= Title Image ===========================
@@ -29,16 +29,13 @@ st.image(
 
 #================================= About =================================
 st.write("""
-## 1️⃣ About
+## 1️⃣ Intro
 	""")
 st.write("""
-Hi all, Welcome to this project. It is a Cat Or Dog Recognizer App!!!
+Hi all, Welcome to this project. This is a Cat or Dog App!!!
 	""")
 st.write("""
 You have to upload your own test images to test it!!!
-	""")
-st.write("""
-**Or**, if you are too much lazy **(**😎, like me!**)**, then also no problem, we already selected some test images for you, you have to just go to that section & click the **⬇️ Download** button to download those pictures!  
 	""")
 
 #============================ How To Use It ===============================
@@ -47,7 +44,7 @@ st.write("""
 	""")
 st.write("""
 Well, it's pretty simple!!!
-- Let me clear first, the model has power to predict image of Cats and Dogs only, so you are requested to give image of a Cat Or a Dog, unless useless prediction can be done!!! 😆 
+- Let me clear first, the model has power to predict image of Cats and Dogs **only**, so you are requested to give image of a Cat or a Dog, unless useless prediction can be done!!! 
 - First of all, download image of a Cat 🐈 or a Dog 🐕!
 - Next, just Browse that file or Drag & drop that file!
 - Please make sure that, you are uploading a picture file!
@@ -87,7 +84,7 @@ try:
 		Now, you are just one step ahead of prediction.
 		""")
 	st.write("""
-		**Just Click The '👉🏼 Predict' Button To See The Prediction Corresponding To This Image! 😄**
+		**Just Click The '👉🏼 Predict' Button To See The Prediction Corresponding To This Image!**
 		""")
 except:
 	st.write("""
@@ -105,11 +102,11 @@ def generate_result(prediction):
              """)
     if prediction == 0:
         st.write("""
-	    	## Model predicts it as an image of a CAT 🐱!!!
+	    	## Model predicts it as an image of a **CAT 🐱**!!!
 	    	""")
     else:
         st.write("""
-	    	## Model predicts it as an image of a DOG 🐶!!!
+	    	## Model predicts it as an image of a **DOG 🐶**!!!
 	    	""")
 
 #=========================== Predict Button Clicked ==========================
@@ -152,7 +149,11 @@ st.text("""""")
 st.text("""""")
 st.text("""""")
 st.text("""""")
-st.text("""""")
 st.write("""
-### ©️ Created By Debmalya Sur
+### ©️ Created By GROUP 12
 	""")
+st.text("""20120210	Tran Thi Kim Tien""")
+st.text("""20120307	Pham Gia Khiem""")
+st.text("""20120328	Hoang Duc Nhat Minh""")
+st.text("""20120061	Pham Duong Truong Duc""")
+st.text("""20120238	Nguyen Ngoc Khanh Vy""")
