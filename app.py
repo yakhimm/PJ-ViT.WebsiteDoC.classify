@@ -29,36 +29,46 @@ st.image(
 
 #================================= About =================================
 st.write("""
-## 1️⃣ Intro
+## 1️⃣ GIỚI THIỆU 
 	""")
 st.write("""
-Hi all, Welcome to this project. This is a Cat or Dog App!!!
+         Xin chào, chào mừng bạn đến với web của chúng tôi.
+         Đây là một trang web sẽ giúp bạn phân loại chó hay mèo thông qua hình ảnh mà bạn đưa vào.
 	""")
 st.write("""
-You have to upload your own test images to test it!!!
+         Bạn chỉ cần đơn giản là upload file lên web của chúng tôi, 
+sau đó hệ thống sẽ trả về kết quả cho bạn hình ảnh mà bạn đưa vào là hình ảnh chó hay mèo.
 	""")
+
+st.write("""
+#### ©️ SẢN PHẨM ĐƯỢC PHÁT TRIỂN BỞI NHÓM 12
+	""")
+st.text("""20120210	Trần Thị Kim Tiến""")
+st.text("""20120307	Phạm Gia Khiêm""")
+st.text("""20120328	Hoàng Đức Nhật Minh""")
+st.text("""20120061	Phạm Dương Trường Đức""")
+st.text("""20120238	Nguyễn Ngọc Khánh Vy""")
 
 #============================ How To Use It ===============================
 st.write("""
-## 2️⃣ How To Use It
+## 2️⃣ HƯỚNG DẪN SỬ DỤNG
 	""")
 st.write("""
-Well, it's pretty simple!!!
-- Let me clear first, the model has power to predict image of Cats and Dogs **only**, so you are requested to give image of a Cat or a Dog, unless useless prediction can be done!!! 
-- First of all, download image of a Cat 🐈 or a Dog 🐕!
-- Next, just Browse that file or Drag & drop that file!
-- Please make sure that, you are uploading a picture file!
-- Press the **👉🏼 Predict** button to see the magic!!!
+Để có thể sử dụng trang web này, bạn chỉ cần các thao tác đơn giản như sau:
+- Trước tiên, bạn phải xác định rõ hình ảnh mà bạn upload lên bắt buộc phải chỉ có chó hay chỉ có mèo, không được có cả chó và mèo trong cùng một bức ảnh. Nếu không việc thực hiện của chương trình sẽ bị lỗi.
+- Tiếp theo, sau khi có hình ảnh chó hoặc mèo, bạn chỉ cần chọn nút **"Browse files"** hoặc kéo thả hình ảnh vào khung có dòng chữ **"Drag and drop file here"**.
+- Hình ảnh mà bạn vừa upload lên sẽ được hiện trên màn hình. 
+- Cuối cùng, nhấn nút **👉🏼 Predict** để xem kết quả.
 
-🔘 **NOTE :** *If you upload other than an image file, then it will show an error massage when you will click the* **👉🏼 Predict** *button!!!*
+🔘 **CHÚ Ý :** *Nếu bạn upload nhiều hơn 1 file hình ảnh, thì nó sẽ xảy ra lỗi nếu bạn nhấn vào nút* **👉🏼 Predict**
 	""")
 
 #========================= What It Will Predict ===========================
 st.write("""
-## 3️⃣ What It Will Predict
+## 3️⃣ THỰC HIỆN CHƯƠNG TRÌNH
 	""")
 st.write("""
-Well, it can predict wheather the image you have uploaded is the image of a Cat 🐈 or a Dog 🐕!
+         Chương trình sẽ thực hiện phân loại hình ảnh chó 🐕 hay mèo 🐈 mà bạn upload lên trang web.
 	""")
 
 #======================== Time To See The Magic ===========================
@@ -81,14 +91,14 @@ try:
 	        use_column_width=True
 	    )
 	st.write("""
-		Now, you are just one step ahead of prediction.
+		Bây giờ, chỉ còn bước cuối cùng là phân loại xem đây là hình ảnh chó hay mèo.
 		""")
 	st.write("""
-		**Just Click The '👉🏼 Predict' Button To See The Prediction Corresponding To This Image!**
+        **Chỉ cần nhấn vào nút '👉🏼 Predict' thì kết quả phân loại sẽ hiện lên màn hình**
 		""")
 except:
 	st.write("""
-		### ❗ Any Picture hasn't selected yet!!!
+		### ❗ Không có hình ảnh nào được chọn!!! Mời chọn hình ảnh!!!
 		""")
 
 #================================= Predict Button ============================
@@ -102,11 +112,11 @@ def generate_result(prediction):
              """)
     if prediction == 0:
         st.write("""
-	    	## Model predicts it as an image of a **CAT 🐱**!!!
+	    	## Chương trình của chúng tôi dự đoán đây là **MỘT CHÚ MÈO 🐱**!!!
 	    	""")
     else:
         st.write("""
-	    	## Model predicts it as an image of a **DOG 🐶**!!!
+	    	## Chương trình của chúng tôi dự đoán đây là **MỘT CHÚ GCHÓ 🐶**!!!
 	    	""")
 
 #=========================== Predict Button Clicked ==========================
@@ -149,11 +159,3 @@ st.text("""""")
 st.text("""""")
 st.text("""""")
 st.text("""""")
-st.write("""
-### ©️ Created By GROUP 12
-	""")
-st.text("""20120210	Tran Thi Kim Tien""")
-st.text("""20120307	Pham Gia Khiem""")
-st.text("""20120328	Hoang Duc Nhat Minh""")
-st.text("""20120061	Pham Duong Truong Duc""")
-st.text("""20120238	Nguyen Ngoc Khanh Vy""")
