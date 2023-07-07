@@ -1,0 +1,8 @@
+tensorflow
+PIL
+vit
+numpy
+shutil
+os
+random
+webbrowser
