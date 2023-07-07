@@ -1,4 +1,4 @@
-/home/appuser/venv/bin/python -m pip install --upgrade pip
+--upgrade pip
 tensorflow==2.11.0
 Pillow==9.5.0
 vit
