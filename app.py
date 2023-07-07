@@ -8,6 +8,8 @@ import numpy as np
 
 import random # inbuilt module
 
+st.set_option('browser.gatherUsageStats', False)
+
 #=================================== Title ===============================
 st.title("""
 Cat 🐱 Or Dog 🐶
