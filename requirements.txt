@@ -1,9 +1,7 @@
+streamlit
 tensorflow==2.11.0
 Pillow==9.5.0
 vit
 numpy==1.21.6
-shutil
-os
 random
-webbrowser
 argparse

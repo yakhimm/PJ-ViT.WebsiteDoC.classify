@@ -5,11 +5,8 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array, save_im
 import tensorflow as tf
 from vit.model import ViT, ViTBase, ViTHuge, ViTLarge
 import numpy as np
-import shutil
 
-import os # inbuilt module
 import random # inbuilt module
-import webbrowser # inbuilt module
 
 #=================================== Title ===============================
 st.title("""
