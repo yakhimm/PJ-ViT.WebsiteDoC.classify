@@ -43,11 +43,11 @@ sau đó hệ thống sẽ trả về kết quả cho bạn hình ảnh mà bạ
 st.write("""
 #### ©️ SẢN PHẨM ĐƯỢC PHÁT TRIỂN BỞI NHÓM 12
 	""")
+st.text("""20120061	Phạm Dương Trường Đức""")
 st.text("""20120210	Trần Thị Kim Tiến""")
+st.text("""20120238	Nguyễn Ngọc Khánh Vy""")
 st.text("""20120307	Phạm Gia Khiêm""")
 st.text("""20120328	Hoàng Đức Nhật Minh""")
-st.text("""20120061	Phạm Dương Trường Đức""")
-st.text("""20120238	Nguyễn Ngọc Khánh Vy""")
 
 #============================ How To Use It ===============================
 st.write("""
@@ -55,7 +55,7 @@ st.write("""
 	""")
 st.write("""
 Để có thể sử dụng trang web này, bạn chỉ cần các thao tác đơn giản như sau:
-- Trước tiên, bạn phải xác định rõ hình ảnh mà bạn upload lên bắt buộc phải chỉ có chó hay chỉ có mèo, không được có cả chó và mèo trong cùng một bức ảnh. Nếu không việc thực hiện của chương trình sẽ bị lỗi.
+- Trước tiên, bạn phải xác định rõ hình ảnh mà bạn upload lên bắt buộc phải chỉ có chó hay chỉ có mèo, không được có cả chó và mèo trong cùng một bức ảnh. Nếu không kết quả sẽ không chính xác.
 - Tiếp theo, sau khi có hình ảnh chó hoặc mèo, bạn chỉ cần chọn nút **"Browse files"** hoặc kéo thả hình ảnh vào khung có dòng chữ **"Drag and drop file here"**.
 - Hình ảnh mà bạn vừa upload lên sẽ được hiện trên màn hình. 
 - Cuối cùng, nhấn nút **👉🏼 Predict** để xem kết quả.
@@ -106,17 +106,18 @@ st.text("""""")
 submit = st.button("👉🏼 Predict")
 
 #==================================== Model ==================================
-def generate_result(prediction):
+def generate_result(predictions, prediction):
     st.write("""
              ## 🎯 RESULT
              """)
+    predict = np.round(predictions[0][prediction] * 100, 2)
     if prediction == 0:
-        st.write("""
-	    	## Chương trình của chúng tôi dự đoán đây là **MỘT CHÚ MÈO 🐱**!!!
+        st.write(f"""
+	    	## Chương trình của chúng tôi dự đoán {predict}% đây là **MỘT CHÚ MÈO 🐱**!!!
 	    	""")
     else:
-        st.write("""
-	    	## Chương trình của chúng tôi dự đoán đây là **MỘT CHÚ GCHÓ 🐶**!!!
+        st.write(f"""
+	    	## Chương trình của chúng tôi dự đoán {predict}% đây là **MỘT CHÚ CHÓ 🐶**!!!
 	    	""")
 
 #=========================== Predict Button Clicked ==========================
@@ -140,9 +141,9 @@ if submit:
 		
 		# Prediction
 		predictions = model.predict(test_image)
-		prediction = np.argmax(predictions)
-
-		generate_result(prediction)
+		prediction = np.argmax(predictions)		
+  
+		generate_result(predictions, prediction)
 
 	except:
 		st.write("""
