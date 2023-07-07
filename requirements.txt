@@ -1,6 +1,6 @@
-tensorflow=2.11.0
-Pillow=9.5.0
-vit-pytorch
+tensorflow==2.11.0
+Pillow==9.5.0
+vit
 numpy
 shutil
 os
